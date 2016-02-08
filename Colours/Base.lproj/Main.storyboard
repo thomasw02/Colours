@@ -1,25 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Colours" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-ec-hip">
+                                <rect key="frame" x="20" y="20" width="128" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red" translatesAutoresizingMaskIntoConstraints="NO" id="2Av-ba-jmX">
+                                <rect key="frame" x="172" y="20" width="128" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellow" translatesAutoresizingMaskIntoConstraints="NO" id="EM3-w2-hI7">
+                                <rect key="frame" x="20" y="420" width="128" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="6lD-pA-E1K">
+                                <rect key="frame" x="172" y="420" width="128" height="128"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-aa-Vj9">
+                                <rect key="frame" x="60" y="204" width="51" height="31"/>
+                                <color key="onTintColor" red="0.063680608675977024" green="0.11792797575483094" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeBlue:" destination="BYZ-38-t0r" eventType="valueChanged" id="rlU-Gm-b09"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwc-fw-S7J">
+                                <rect key="frame" x="212" y="204" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.0" blue="0.081942766766834652" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeRed:" destination="BYZ-38-t0r" eventType="valueChanged" id="tkh-la-0p0"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W0j-nG-Cps">
+                                <rect key="frame" x="60" y="337" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.92433181821548549" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeYellow:" destination="BYZ-38-t0r" eventType="valueChanged" id="l77-AC-neZ"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcr-I7-bTZ">
+                                <rect key="frame" x="212" y="337" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeGreen:" destination="BYZ-38-t0r" eventType="valueChanged" id="nH7-mD-VwC"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="blueImage" destination="eDT-ec-hip" id="UHr-T2-PlX"/>
+                        <outlet property="blueSwitch" destination="gX7-aa-Vj9" id="tVH-w0-lUA"/>
+                        <outlet property="greenImage" destination="6lD-pA-E1K" id="9x9-3h-bYO"/>
+                        <outlet property="greenSwitch" destination="pcr-I7-bTZ" id="w86-wl-kUj"/>
+                        <outlet property="redImage" destination="2Av-ba-jmX" id="QNh-jl-uW0"/>
+                        <outlet property="redSwitch" destination="Mwc-fw-S7J" id="YQc-XC-vas"/>
+                        <outlet property="yellowImage" destination="EM3-w2-hI7" id="i3T-N0-85e"/>
+                        <outlet property="yellowSwitch" destination="W0j-nG-Cps" id="huP-N9-mhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="885" y="657"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue" width="2000" height="2000"/>
+        <image name="green" width="2000" height="2000"/>
+        <image name="red" width="2000" height="2000"/>
+        <image name="yellow" width="2000" height="2000"/>
+    </resources>
 </document>
